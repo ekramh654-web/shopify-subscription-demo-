@@ -1,0 +1,80 @@
+<section class="faq-section">
+
+  <div class="container">
+
+    <h2>Frequently Asked Questions</h2>
+
+    {% for block in section.blocks %}
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+          {{ block.settings.question }}
+        </button>
+
+        <div class="faq-answer">
+          {{ block.settings.answer }}
+        </div>
+
+      </div>
+
+    {% endfor %}
+
+  </div>
+
+</section>
+
+<style>
+.faq-section {
+  padding: 60px 20px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 15px;
+  background: #f5f5f5;
+  border: none;
+  cursor: pointer;
+}
+
+.faq-answer {
+  padding: 15px;
+  border: 1px solid #eee;
+}
+</style>
+
+{% schema %}
+{
+  "name": "FAQ Accordion",
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQ",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "How does the subscription work?"
+        },
+        {
+          "type": "textarea",
+          "id": "answer",
+          "label": "Answer",
+          "default": "You’ll receive your product monthly with automatic savings."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ Accordion"
+    }
+  ]
+}
+{% endschema %}
