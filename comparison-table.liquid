@@ -1,0 +1,78 @@
+<section class="comparison-table">
+
+  <div class="container">
+
+    <h2>{{ section.settings.heading }}</h2>
+
+    <table>
+
+      <tr>
+        <th>Features</th>
+        <th>Our Brand</th>
+        <th>Others</th>
+      </tr>
+
+      <tr>
+        <td>Premium Ingredients</td>
+        <td>✔</td>
+        <td>✘</td>
+      </tr>
+
+      <tr>
+        <td>Subscription Savings</td>
+        <td>✔</td>
+        <td>✘</td>
+      </tr>
+
+      <tr>
+        <td>Fast Shipping</td>
+        <td>✔</td>
+        <td>✔</td>
+      </tr>
+
+    </table>
+
+  </div>
+
+</section>
+
+<style>
+.comparison-table {
+  padding: 60px 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 16px;
+  text-align: center;
+}
+
+table th {
+  background: #f5f5f5;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Comparison Table",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Why Customers Choose Us"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Comparison Table"
+    }
+  ]
+}
+{% endschema %}
