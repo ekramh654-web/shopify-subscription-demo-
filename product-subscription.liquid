@@ -1,0 +1,69 @@
+<section class="product-subscription">
+
+  <div class="container">
+
+    <h1>{{ product.title }}</h1>
+
+    <p>{{ product.description }}</p>
+
+    <div class="purchase-options">
+
+      <label>
+        <input type="radio" name="purchase_type" checked>
+        One-Time Purchase
+      </label>
+
+      <label>
+        <input type="radio" name="purchase_type">
+        Subscribe & Save 20%
+      </label>
+
+    </div>
+
+    <button class="cta-button">
+      Add To Cart
+    </button>
+
+  </div>
+
+</section>
+
+<style>
+.product-subscription {
+  padding: 80px 20px;
+}
+
+.product-subscription h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.purchase-options {
+  margin: 30px 0;
+}
+
+.purchase-options label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.cta-button {
+  background: black;
+  color: white;
+  padding: 14px 28px;
+  border: none;
+  cursor: pointer;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Product Subscription",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Product Subscription"
+    }
+  ]
+}
+{% endschema %}
