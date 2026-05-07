@@ -1,0 +1,25 @@
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  var buttons = document.querySelectorAll('.cta-button');
+
+  buttons.forEach(function(button){
+
+    button.addEventListener('click', function(){
+
+      window._learnq = window._learnq || [];
+
+      window._learnq.push(['track', 'Subscription CTA Clicked', {
+
+        page_name: '{{ page.title }}',
+        product_name: '{{ product.title }}',
+        button_text: this.innerText
+
+      }]);
+
+    });
+
+  });
+
+});
+</script>
