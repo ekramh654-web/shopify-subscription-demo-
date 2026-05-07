@@ -1,0 +1,54 @@
+<div class="sticky-atc">
+
+  <div class="sticky-wrapper">
+
+    <div>
+      <strong>{{ product.title }}</strong>
+    </div>
+
+    <button class="cta-button">
+      Buy Now
+    </button>
+
+  </div>
+
+</div>
+
+<style>
+.sticky-atc {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-top: 1px solid #ddd;
+  padding: 15px 20px;
+  z-index: 999;
+}
+
+.sticky-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cta-button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Sticky ATC",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Sticky ATC"
+    }
+  ]
+}
+{% endschema %}
